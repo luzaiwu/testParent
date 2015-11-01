@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:body>
+		<h:form id="relaxAmountFromId">
+			<p:messages />
+			<p:dataTable id="relaxAmountTableId" var="pag" paginator="true"
+				styleClass="text-center" rows="10" lazy="true"
+				paginatorPosition="bottom"
+				paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+				rowsPerPageTemplate="5,10,15,20,30,50"
+				value="#{relaxAmountBean.relaxAmountBeanPagenator}"
+				emptyMessage="没有找到记录">
+				<p:column>
+					<p:rowToggler />
+				</p:column>
+				<p:column headerText="ID" width="70px">
+					<h:outputText value="#{pag.id}" />
+				</p:column>
+				<p:column headerText="类型">
+					<h:outputText value="#{pag.basicDateGroupId}" />
+				</p:column>
+				<p:column headerText="品类">
+					<h:outputText value="#{pag.categoryId}" />
+				</p:column>
+				<p:column headerText="弹性">
+					<h:outputText value="#{pag.elasticityId}" />
+				</p:column>
+				<p:column headerText="版型">
+					<h:outputText value="#{pag.pattenId}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</h:body>
+</ui:composition>
+

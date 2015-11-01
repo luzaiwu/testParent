@@ -1,0 +1,11 @@
+com\service\ServiceAdaptor$SessionWrapper.class
+page\PageUI.class
+com\service\ServiceAdaptor.class
+com\service\HibernateUtil.class
+page\PageOperator.class
+page\LazyDataLoader.class
+com\service\RelaxAmountBeanService.class
+com\entity\RelaxAmount.class
+com\service\IService.class
+page\Page.class
+page\PageDto.class

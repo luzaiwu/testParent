@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+  <display-name>webServer</display-name>
+<!--   <welcome-file-list> -->
+<!--     <welcome-file>index.html</welcome-file> -->
+<!--     <welcome-file>index.xhtml</welcome-file> -->
+<!--     <welcome-file>login.xhtml</welcome-file> -->
+<!--   </welcome-file-list> -->
+  
+<!--   <error-page> -->
+<!-- 	<error-code>404</error-code> -->
+<!-- 	<location>/NotFound404.html</location> -->
+<!--   </error-page> -->
+
+<!--  <error-page> -->
+<!-- 	<error-code>500</error-code> -->
+<!-- 	<location>/NotFound500.html</location> -->
+<!--  </error-page> -->
+  
+  <context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>redmond</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>production</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
+    <param-value>true</param-value>
+  </context-param>
+<!--   <context-param> -->
+<!--     <param-name>org.jboss.jbossfaces.WAR_BUNDLES_JSF_IMPL</param-name> -->
+<!--     <param-value>true</param-value> -->
+<!--   </context-param> -->
+<!--   <context-param> -->
+<!--     <param-name>com.sun.faces.expressionFactory</param-name> -->
+<!--     <param-value>org.jboss.el.ExpressionFactoryImpl</param-value> -->
+<!--   </context-param> -->
+  <context-param>
+    <param-name>com.sun.faces.validateXML</param-name>
+    <param-value>false</param-value>
+  </context-param>
+<!--   <filter> -->
+<!--     <filter-name>Set Character Encoding</filter-name> -->
+<!--     <filter-class>com.betterone.server.filter.SetCharacterEncodingFilter</filter-class> -->
+<!--     <init-param> -->
+<!--       <param-name>encoding</param-name> -->
+<!--       <param-value>UTF-8</param-value> -->
+<!--     </init-param> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>Set Character Encoding</filter-name> -->
+<!--     <url-pattern>/*</url-pattern> -->
+<!--   </filter-mapping> -->
+<!--   <filter> -->
+<!--     <filter-name>PrimeFaces FileUpload Filter</filter-name> -->
+<!--     <filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class> -->
+<!--     <init-param> -->
+<!--       <param-name>thresholdSize</param-name> -->
+<!--       <param-value>524288000</param-value> -->
+<!--     </init-param> -->
+<!--     <init-param> -->
+<!--       <param-name>uploadDirectory</param-name> -->
+<!--       <param-value>uploads</param-value> -->
+<!--     </init-param> -->
+<!--   </filter> -->
+<!--   <filter> -->
+<!--     <filter-name>server_user_filter</filter-name> -->
+<!--     <filter-class>com.betterone.server.filter.ServerUserFilter</filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>server_user_filter</filter-name> -->
+<!--     <url-pattern>/back-end/*</url-pattern> -->
+<!--   </filter-mapping> -->
+<!--   <filter> -->
+<!--     <filter-name>client_user_filter</filter-name> -->
+<!--     <filter-class>com.betterone.server.filter.ClientUserFilter</filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>client_user_filter</filter-name> -->
+<!--     <url-pattern>/front-end/*</url-pattern> -->
+<!--   </filter-mapping> -->
+<!--   <filter> -->
+<!--     <filter-name>app_filter</filter-name> -->
+<!--     <filter-class>com.betterone.server.filter.AppFilter</filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>app_filter</filter-name> -->
+<!--     <url-pattern>/app/*</url-pattern> -->
+<!--   </filter-mapping> -->
+<!--   <filter> -->
+<!--     <filter-name>systemUser_filter</filter-name> -->
+<!--     <filter-class>com.betterone.server.filter.SystemUserFilter</filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>systemUser_filter</filter-name> -->
+<!--     <url-pattern>/back-end/*</url-pattern> -->
+<!--   </filter-mapping> -->
+<!--   <listener> -->
+<!--     <listener-class>com.sun.faces.config.ConfigureListener</listener-class> -->
+<!--   </listener> -->
+<!--   <listener> -->
+<!--     <listener-class> -->
+<!--       org.apache.commons.fileupload.servlet.FileCleanerCleanup -->
+<!--     </listener-class> -->
+<!--   </listener> -->
+<!--   <servlet> -->
+<!--     <servlet-name>File DownLoad</servlet-name> -->
+<!--     <servlet-class>com.betterone.server.servlet.DownLoad</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>File DownLoad</servlet-name> -->
+<!--     <url-pattern>/DownLoad</url-pattern> -->
+<!--   </servlet-mapping> -->
+<!--   <servlet> -->
+<!--     <servlet-name>OutPutPdf DownLoad</servlet-name> -->
+<!--     <servlet-class>com.betterone.server.servlet.OutPutPdf</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>OutPutPdf DownLoad</servlet-name> -->
+<!--     <url-pattern>/OutPutPdf</url-pattern> -->
+<!--   </servlet-mapping> -->
+<!--   <servlet> -->
+<!--     <servlet-name>ContextConfigServlet</servlet-name> -->
+<!--     <servlet-class>com.betterone.server.servlet.ContextConfigServlet</servlet-class> -->
+<!--     <load-on-startup>1</load-on-startup> -->
+<!--   </servlet> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>PrimeFaces FileUpload Filter</filter-name> -->
+<!--     <servlet-name>Faces Servlet</servlet-name> -->
+<!--   </filter-mapping> -->
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+<!--   <servlet> -->
+<!--     <servlet-name>DepartmentInfo REST Service</servlet-name> -->
+<!--     <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> -->
+<!--     <init-param> -->
+<!--       <param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name> -->
+<!--       <param-value>com.betterone.server.filter.WebServiceRequestFilter</param-value> -->
+<!--     </init-param> -->
+<!--     <init-param> -->
+<!--       <param-name>com.sun.jersey.config.property.packages</param-name> -->
+<!--       <param-value>com.betterone.server.webservice;org.codehaus.jackson.jaxrs</param-value> -->
+<!--     </init-param> -->
+<!--     <init-param> -->
+<!--       <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name> -->
+<!--       <param-value>true</param-value> -->
+<!--     </init-param> -->
+<!--     <init-param> -->
+<!--       <param-name>com.sun.jersey.config.property.packages</param-name> -->
+<!--       <param-value>upload</param-value> -->
+<!--     </init-param> -->
+<!--     <load-on-startup>2</load-on-startup> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>DepartmentInfo REST Service</servlet-name> -->
+<!--     <url-pattern>/rest/*</url-pattern> -->
+<!--   </servlet-mapping> -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/applicationContext.xml</param-value>
+  </context-param>
+<!--   <listener> -->
+<!--     <listener-class>com.betterone.cache.BetterOneContextLoaderListener</listener-class> -->
+<!--   </listener> -->
+</web-app>
